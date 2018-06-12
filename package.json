@@ -1,0 +1,26 @@
+{
+  "name": "cordova-umeng-plugin",
+  "version": "3.0.0",
+  "description": "umeng analytics plugin",
+  "cordova": {
+    "id": "cordova-umeng-plugin",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+http://git@192.168.1.111:wjs/cordova-umeng-plugin.git"
+  },
+  "bugs": {
+    "url": "http://192.168.1.111:wjs/cordova-umeng-plugin/issues"
+  },
+  "author": "umeng",
+  "license": "ISC"
+}
