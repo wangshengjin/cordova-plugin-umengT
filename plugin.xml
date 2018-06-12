@@ -10,7 +10,7 @@
         <clobbers target="MobclickAgent" />
     </js-module>
     
-    <!-- ios -->
+    <!-- ios
     <platform name="ios">
         
         <header-file src="src/ios/UMPlugin.h" />
@@ -26,11 +26,12 @@
         <framework src="libsqlite3.tbd"/>
         <framework src="libz.tbd"/>
         
-    </platform>
+    </platform> -->
     <!-- android -->
     <platform name="android">
         
-        <source-file src="src/android/umeng-analytics-v6.0.4.jar" target-dir="libs" />
+        <source-file src="src/android/umeng-analytics-7.5.0.jar" target-dir="libs" />
+        <source-file src="src/android/umeng-common-1.5.0.jar" target-dir="libs" />
         <source-file src="src/android/UMPlugin.java" target-dir="src/com/umeng/plugin" />
         
         <config-file target="res/xml/config.xml" parent="/widget/plugins">
