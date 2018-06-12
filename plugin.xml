@@ -30,8 +30,8 @@
     <!-- android -->
     <platform name="android">
         
-        <source-file src="src/android/umeng-analytics-7.5.0.jar" target-dir="libs" />
-        <source-file src="src/android/umeng-common-1.5.0.jar" target-dir="libs" />
+        <source-file src="src/android/umeng-analytics-7.5.0.jar" target-dir="app/libs" />
+        <source-file src="src/android/umeng-common-1.5.0.jar" target-dir="app/libs" />
         <source-file src="src/android/UMPlugin.java" target-dir="src/com/umeng/plugin" />
         
         <config-file target="res/xml/config.xml" parent="/widget/plugins">
