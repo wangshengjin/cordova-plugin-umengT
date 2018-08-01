@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" 
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="Umeng"
+        id="cordova-plugin-umengT"
         version="3.0.0">
     
-    <name>Umeng</name>
+    <name>AnalyticsSDK</name>
     
-    <js-module src="www/Umeng.js" name="Umeng">
+    <js-module src="www/analyticssdk.js" name="AnalyticsSDK">
         <clobbers target="MobclickAgent" />
     </js-module>
     
-    <!-- ios
+    <!-- ios -->
     <platform name="ios">
-        
-        <header-file src="src/ios/UMPlugin.h" />
-        <source-file src="src/ios/UMPlugin.m" />
+        <header-file src="src/ios/UMAnalyticsModule.h" />
+        <source-file src="src/ios/UMAnalyticsModule.m" />
+         <header-file src="src/ios/UMCommonModule.h" />
+        <source-file src="src/ios/UMCommonModule.m" />
         
         <config-file target="config.xml" parent="/widget/plugins">
-            <feature name="Umeng">
-                <param name="ios-package" value="UMPlugin"/>
+            <feature name="AnalyticsSDK">
+                <param name="ios-package" value="UMAnalyticsModule"/>
             </feature>
         </config-file>
-        <source-file src="src/ios/UMMobClick.framework" framework="true" />
+        <framework src="src/ios/UMCommon.framework" custom="true"/>
+        <framework src="src/ios/UMAnalytics.framework" custom="true"/>
         <framework src="CoreTelephony.framework" />
         <framework src="libsqlite3.tbd"/>
         <framework src="libz.tbd"/>
-        
-    </platform> -->
+    </platform>
     <!-- android -->
     <platform name="android">
         
-        <source-file src="src/android/umeng-analytics-7.5.0.jar" target-dir="app/libs" />
-        <source-file src="src/android/umeng-common-1.5.0.jar" target-dir="app/libs" />
-        <source-file src="src/android/UMPlugin.java" target-dir="src/com/umeng/plugin" />
+        <source-file src="src/android/umeng-analytics-7.5.3.jar" target-dir="app/libs" />
+        <source-file src="src/android/umeng-common-1.5.3.jar" target-dir="app/libs" />
+        <source-file src="src/android/AnalyticsSDK.java" target-dir="src/com/umeng/plugin" />
         
         <config-file target="res/xml/config.xml" parent="/widget/plugins">
-            <feature name="Umeng">
-                <param name="android-package" value="com.umeng.plugin.UMPlugin"/>
+            <feature name="AnalyticsSDK">
+                <param name="android-package" value="com.umeng.plugin.AnalyticsSDK"/>
             </feature>
         </config-file>
         <config-file target="AndroidManifest.xml"  parent="application">
