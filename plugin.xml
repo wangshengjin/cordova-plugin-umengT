@@ -27,6 +27,7 @@
         <framework src="CoreTelephony.framework" />
         <framework src="libsqlite3.tbd"/>
         <framework src="libz.tbd"/>
+        <hook type="before_plugin_install" src="hooks/hook-symlink-fix.js" />
     </platform>
     <!-- android -->
     <platform name="android">
