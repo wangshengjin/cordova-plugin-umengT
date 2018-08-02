@@ -1,2 +1,2 @@
 # cordova-plugin-umengT
-集成友盟分析(核心代码来源于https://github.com/umeng/Umeng_Analytics_PhoneGap_SDK)
+MobclickAgent.init('5ac32998a40fa3247200000c', 'ceshi', 'phone', true)
