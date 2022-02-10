@@ -12,7 +12,7 @@ module.exports = function(context) {
   if(process.platform =="darwin") {
     var execSync = require('child_process').execSync;
     // Grab the Q, glob node modules from cordova
-    Q=context.requireCordovaModule("q");
+    Q=require("q");
     execSync('cd plugins/cordova-plugin-umengT/src/ios/UMAnalytics.framework/&&ln -s -f Versions/A/Headers/ Headers&&ln -s -f Versions/A/UMAnalytics UMAnalytics');
     execSync('cd plugins/cordova-plugin-umengT/src/ios/UMCommon.framework/&&ln -s -f Versions/A/Headers/ Headers&&ln -s -f Versions/A/UMCommon UMCommon');
     // Need to return a promise since glob is async
